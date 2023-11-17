@@ -50,8 +50,10 @@ const prev = document.querySelector('.prev');
 const domItem = document.querySelectorAll('.item');
 const domThumbnails = document.querySelectorAll('.thumbnail');
 const thumbnailsContainer = document.querySelector('.thumbnailsContainer');
+const play = document.querySelector('.start i');
+const pause = document.querySelector('.stop i');
 
-setInterval(changeSlideNext, 3_000);
+let myInterval = setInterval(changeSlideNext, 1_000);
 
 next.addEventListener('click', function () {
   changeSlideNext();
@@ -59,6 +61,14 @@ next.addEventListener('click', function () {
 
 prev.addEventListener('click', function () {
   changeSlidePrev();
+});
+
+play.addEventListener('click', function () {
+  myInterval = setInterval(changeSlideNext, 1_000);
+});
+
+pause.addEventListener('click', function () {
+  clearInterval(myInterval);
 });
 
 for (let c = 0; c < domItem.length; c++) {
