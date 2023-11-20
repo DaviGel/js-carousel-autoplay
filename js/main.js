@@ -54,7 +54,7 @@ const play = document.querySelector('.start i');
 const pause = document.querySelector('.stop i');
 let status = false;
 
-let myInterval = setInterval(changeSlideNext, 3_000);
+let myInterval;
 
 next.addEventListener('click', function () {
   changeSlideNext();
