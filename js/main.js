@@ -65,7 +65,7 @@ prev.addEventListener('click', function () {
 });
 
 play.addEventListener('click', function () {
-  myInterval = setInterval(changeSlideNext(), 3_000);
+  myInterval = setInterval(changeSlideNext, 3_000);
 });
 
 pause.addEventListener('click', function () {
