@@ -52,6 +52,7 @@ const domThumbnails = document.querySelectorAll('.thumbnail');
 const thumbnailsContainer = document.querySelector('.thumbnailsContainer');
 const play = document.querySelector('.start i');
 const pause = document.querySelector('.stop i');
+let status = false;
 
 let myInterval = setInterval(changeSlideNext, 3_000);
 
@@ -64,7 +65,7 @@ prev.addEventListener('click', function () {
 });
 
 play.addEventListener('click', function () {
-  myInterval = setInterval(changeSlideNext, 3_000);
+  myInterval = setInterval(changeSlideNext(), 3_000);
 });
 
 pause.addEventListener('click', function () {
